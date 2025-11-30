@@ -105,7 +105,7 @@
 
   <section id="contact" class="card">
   <h2>Contact Me</h2>
-  <form action="http://localhost:3000/send-email" method="POST" class="contact-form">
+  <form action="https://formspree.io/f/abcdxyz" method="POST" class="contact-form">
     <label>
       Name:
       <input type="text" name="name" required />
@@ -118,6 +118,8 @@
       Message:
       <textarea name="message" rows="5" required></textarea>
     </label>
+    <!-- Hidden subject line -->
+    <input type="hidden" name="_subject" value="New Resume Website Inquiry" />
     <button type="submit" class="btn">Send Message</button>
   </form>
 </section>
