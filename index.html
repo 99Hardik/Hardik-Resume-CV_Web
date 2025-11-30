@@ -103,24 +103,28 @@
 
   <script src="assets/script.js"></script>
 
-  <section id="contact" class="card">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
-    <label>
-      Name:
-      <input type="text" name="name" required />
-    </label>
-    <label>
-      Email:
-      <input type="email" name="email" required />
-    </label>
-    <label>
-      Message:
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
+  <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
+  <label>
+    Name:
+    <input type="text" name="name" required />
+  </label>
+  <label>
+    Email:
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    Message:
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+  <!-- Hidden subject field -->
+  <input type="hidden" name="_subject" value="New Resume Website Inquiry" />
+  <button type="submit" class="btn">Send Message</button>
+</form>
+
+<!-- Success popup -->
+<div id="successPopup" class="popup" role="alert">
+  <p>✅ Thanks, your message has been sent!</p>
+</div>
   
 </body>
 </html>
