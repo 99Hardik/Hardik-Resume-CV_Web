@@ -137,6 +137,31 @@ body{
   text-align:center;
 }
 
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--accent);
+}
+.contact-form button {
+  justify-self: start;
+}
+
 /* Print styles for PDF */
 @media print {
   body{background:#fff;color:#000}
