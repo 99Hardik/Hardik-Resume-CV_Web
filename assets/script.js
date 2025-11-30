@@ -169,6 +169,29 @@ function setYear() {
   y.textContent = new Date().getFullYear();
 }
 
+function enableFormPopup() {
+  const form = document.getElementById("contactForm");
+  const popup = document.getElementById("successPopup");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" }
+    });
+    if (response.ok) {
+      popup.classList.add("show");
+      form.reset();
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", enableFormPopup);
+
 /* Init */
 document.addEventListener("DOMContentLoaded", () => {
   fillSummary();
